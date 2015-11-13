@@ -20,11 +20,11 @@
           console.log(results.values());
       });
       
-      var $mau = MP.api.segment(Viewed Inspiration Screen, 'mp_country_code', { 
+      var $mau = MP.api.segment(eventName, 'mp_country_code', { 
           from: moment().subtract(30, 'days'),                  
-          to: moment().subtract(1, 'days'),                      
+          to: moment().subtract(1, 'days'),                     
           unit: 'month',                                        
-          type: 'unique'                                       
+          type: 'unique'                                        
       });
 
       $mau.done(function(results) {
