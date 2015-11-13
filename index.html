@@ -25,7 +25,11 @@
       });
       
       $.when($dau, $mau).done(function(dau, mau) {
-          alert('Success!');
+          var dauMau = dau.avg().divide(mau.sum()).values();
+        $('<div></div>').appendTo('body').MPChart({ 
+            chartType: 'bar',                       
+            data: dauMau                            
+        });
       });
     </script>
   </body>
