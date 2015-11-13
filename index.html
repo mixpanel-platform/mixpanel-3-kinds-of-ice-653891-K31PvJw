@@ -19,6 +19,17 @@
       $dau.done(function(results) {
           console.log(results.values());
       });
+      
+      var $mau = MP.api.segment(Viewed Inspiration Screen, 'mp_country_code', { 
+          from: moment().subtract(30, 'days'),                  
+          to: moment().subtract(1, 'days'),                      
+          unit: 'month',                                        
+          type: 'unique'                                       
+      });
+
+      $mau.done(function(results) {
+          console.log(results.values());
+      });
     </script>
   </body>
 </html>
